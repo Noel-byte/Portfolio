@@ -1,7 +1,7 @@
 export default function Footer(){
     return(
         <>
-        <p>This is a footer</p>
+        <p><span>&Copy right</span> This is a footer</p>
         </>
     )
 }
