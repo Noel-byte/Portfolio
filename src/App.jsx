@@ -16,7 +16,7 @@ function App() {
   return (
     <>
          <Header/>
-         <CheckOutWork handleClick={handleClick}/>
+         <CheckOutWork handleClick={handleClick} label = {showProjects?'Hide Work':'Check Out Work'}/>
            {showProjects && <Projects projects={projects}/>} 
          <Footer/>
         
