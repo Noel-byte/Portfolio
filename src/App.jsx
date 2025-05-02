@@ -6,7 +6,7 @@ import { useState } from "react"
 
 function App() {
   const [showProjects,setShowProjects] = useState(false)
-  const projects = [{title:'Todo app'},{title:'E-Commerce'},{title:'Tic-Tac-Toe'}]
+  const projects = [{title:'Todo app',link:'todo-list'},{title:'Portfolio Website',link:'Portfolio'}]
   const handleClick = ()=>{
     //first load all the projects available
     // show all the available project list
