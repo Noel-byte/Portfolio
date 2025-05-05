@@ -1,29 +1,43 @@
 import React from 'react';
 
 export const Projects = ({ projects }) => {
-   
   return (
-    <div className='flex flex-col items-center justify-center mt-8'>
-      <h2 className=' text-2xl'>Projects</h2>
-      <div className='m-3 flex flex-wrap justify-center gap-5 bg-stone-400 py-3 px-2 rounded-lg'>{projects.map((project,index) => {
-         const url = `https://github.com/Noel-byte/${project.link}`
-         return(
-        <div key={index} className='max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white px-2 py-8'>
-           <h3 className=' font-bold text-lg text-center underline'>{project.title}</h3>
-           <h4 className=' font-semibold'>Technologies</h4>
-           <ul className=' list-disc px-3 py-1' >
+    <div className="flex flex-col items-center justify-center mt-8">
+      <h2 className=" text-2xl">Projects</h2>
+      <div className="m-3 flex flex-wrap justify-center gap-5 bg-stone-400 py-3 px-2 rounded-lg">
+        {projects.map((project, index) => {
+          const url = `https://github.com/Noel-byte/${project.link}`;
+          return (
+            <div
+              key={index}
+              className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white px-2 py-8"
+            >
+              <h3 className=" font-bold text-2xl text-center underline pb-1">
+                {project.title}
+              </h3>
+              <h4 className=" font-semibold text-lg">Tech Stack</h4>
+              <ul className=" list-disc px-3 py-1">
+                {project.tech.map((item, index) => {
+                  const [key, value] = Object.entries(item)[0];
+                  return (
+                    <li key={index}>
+                      <strong>{key} : </strong>
+                      {value}
+                    </li>
+                  );
+                })}
+              </ul>
 
-            {project.tech.map((t,index)=>(
-                   <li key={index}>{t}</li>
-            ))}
-
-           </ul>
-         
-           <a href={url} target='_blank' className=' underline text-blue-500'>View on GitHub</a>
-        </div>
-         )
-      })}
-        
+              <a
+                href={url}
+                target="_blank"
+                className=" underline text-blue-500"
+              >
+                View on GitHub
+              </a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
