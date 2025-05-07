@@ -9,8 +9,8 @@ function App() {
   const projects = {
    todo: {
       title: 'Todo app',
-      flink: 'todoapp-frontend',
-      blink: 'todoapp-backend',
+      flink: 'https://github.com/Noel-byte/todoapp-frontend',
+      blink: 'https://github.com/Noel-byte/todoapp-backend',
       weblink: 'https://todofrontapp.netlify.app',
       tech: [
         { frontend: 'React.js + Tailwind CSS' },
@@ -21,7 +21,7 @@ function App() {
   portfolio: {
       
       title: 'Portfolio Website',
-      flink: 'Portfolio',
+      flink: 'https://github.com/Noel-byte/Portfolio',
       blink: undefined,
       weblink: 'https://ntesfe.netlify.app',
       tech: [{ frontend: 'React.js + Tailwind CSS' }],
