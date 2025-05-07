@@ -33,7 +33,7 @@ function App() {
     setShowProjects((prev) => !prev);
   };
   return (
-    <>
+    <div className=' bg-backcolor'>
       <Header />
       <CheckOutWork
         handleClick={handleClick}
@@ -41,7 +41,7 @@ function App() {
       />
       {showProjects && <Projects projects={projects} />}
       <Footer />
-    </>
+    </div>
   );
 }
 
