@@ -7,6 +7,7 @@ export const Projects = ({ projects }) => {
       <div className="m-3 flex flex-wrap justify-center gap-5 bg-stone-400 py-3 px-2 rounded-lg">
         {projects.map((project, index) => {
           const url = `https://github.com/Noel-byte/${project.link}`;
+          const weburl = `${project.weblink}`
           return (
             <div
               key={index}
@@ -27,14 +28,23 @@ export const Projects = ({ projects }) => {
                   );
                 })}
               </ul>
-
-              <a
+                <div className=' max-w-sm flex justify-around'>
+                <a
                 href={url}
                 target="_blank"
                 className=" underline text-blue-500"
               >
                 View on GitHub
               </a>
+              <a
+                href={weburl}
+                target="_blank"
+                className=" underline text-blue-500"
+              >
+                Visit Site
+              </a>
+                </div>
+             
             </div>
           );
         })}
