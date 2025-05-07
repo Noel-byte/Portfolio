@@ -4,9 +4,9 @@ export const Project = ({project}) => {
   return (   
           <div
              key={project.title}
-            className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white px-2 py-8"
+            className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-gray-800 text-white px-4 py-8"
           >
-            <h3 className=" font-bold text-2xl text-center underline pb-1">
+            <h3 className=" font-bold text-2xl text-center underline pb-3">
               {project.title}
             </h3>
             <h4 className=" font-semibold text-lg">Tech Stack</h4>
@@ -21,26 +21,28 @@ export const Project = ({project}) => {
                 );
               })}
             </ul>
-              <div className=' max-w-sm flex flex-col justify-around bg-stone-400 p-2 text-center rounded mt-2 shadow-lg'>
+              <div className=' max-w-sm flex flex-col gap-2 justify-around bg-stone-400 p-2 text-center rounded mt-2 shadow-lg'>
+                <h2 className='underline text-gray-900 mb-1'>View Work On Github</h2>
               <a
               href={project.flink}
               target="_blank"
-              className="  text-blue-500 hover:text-blue-800 font-semibold"
+              className="  text-stone-100 font-bold bg-stone-500 rounded py-1"
             >
-             GitHub - Frontend
+            Frontend
             </a>
             {project.blink&& (<a
               href={project.blink}
               target="_blank"
-              className="  text-blue-500 hover:text-blue-800 font-semibold"
+              className="  text-stone-100 font-bold bg-stone-500 py-1"
             >
-           GitHub - Backend
+         Backend
             </a>)}
-           
+            <hr />
+               <h3> OR </h3>
             <a
               href={project.weblink}
               target="_blank"
-              className="  text-blue-500 hover:text-blue-800 font-semibold"
+              className="  font-semibold bg-stone-500 text-white rounded py-1 mt-2"
             >
               Visit Site
             </a>
